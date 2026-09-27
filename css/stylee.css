@@ -1,0 +1,257 @@
+/* Reset general de márgenes y caja */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("../img/fondo_1.jpg");
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+}
+
+/* Header superior fijo */
+.header-principal {
+    background-color: #2D0000;
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    color: #EEEAD7;
+    font-size: 26px;
+    font-family: 'Franklin Gothic Medium', sans-serif;
+    position: absolute;
+    left: 40px;
+    margin: 0;
+}
+
+/* Menú de navegación */
+.navegacion {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-pestana {
+    background-color: #8C2D2D;
+    color: #EEEAD7;
+    text-decoration: none;
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-pestana:hover {
+    background-color: #A63838;
+    transform: translateY(-2px);
+}
+
+/* Redes Sociales en Esquina Superior Derecha */
+.redes-header {
+    position: absolute;
+    right: 40px;
+    display: flex;
+    gap: 15px;
+}
+
+.redes-header img {
+    width: 28px;
+    height: 28px;
+    transition: transform 0.2s ease;
+}
+
+.redes-header img:hover {
+    transform: scale(1.15);
+}
+
+/* Contenedor del Contenido Principal */
+.contenido-principal {
+    margin-top: 120px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.seccion-contenedor {
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Presentación con Foto y Tarjeta al lado */
+.tarjeta-presentacion {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Marco circular de la foto de perfil */
+.marco-circular {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #8C2D2D;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    flex-shrink: 0;
+}
+
+.marco-circular img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Tarjeta Semitransparente con Efecto Cristal */
+.tarjeta-semitransparente {
+    background-color: rgba(0, 0, 0, 0.55);
+    border-radius: 16px;
+    padding: 35px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 600px;
+}
+
+.tarjeta-ancha {
+    max-width: 900px;
+}
+
+/* Estilos de Textos e Información */
+.tarjeta-semitransparente h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #8C2D2D;
+    padding-bottom: 8px;
+    color: #EEEAD7;
+}
+
+.tarjeta-semitransparente h3 {
+    font-size: 18px;
+    margin-top: 15px;
+    margin-bottom: 8px;
+    color: #E2BF7D;
+}
+
+.descripcion-personal {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.datos-personales p, 
+.bloque-academico p, 
+.datos-contacto p {
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.bloque-academico {
+    margin-bottom: 20px;
+}
+
+/* Reproductor de Música de Ambiente */
+.musica-ambiente {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px dashed rgba(255, 255, 255, 0.2);
+}
+
+.musica-ambiente p {
+    font-size: 14px;
+    color: #E2BF7D;
+    margin-bottom: 6px;
+}
+
+.musica-ambiente audio {
+    width: 100%;
+    height: 38px;
+    margin-top: 6px;
+    border-radius: 20px;
+    outline: none;
+    opacity: 0.85;
+    transition: opacity 0.3s ease;
+}
+
+.musica-ambiente audio:hover {
+    opacity: 1;
+}
+
+.credito-audio {
+    font-size: 11px;
+    opacity: 0.7;
+    display: block;
+    margin-top: 6px;
+    color: #E2BF7D;
+}
+
+/* ESTILOS PARA SKILLS (2 COLUMNAS CON GRID) */
+.contenedor-columnas-skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 15px;
+}
+
+.bloque-skill-item {
+    margin-bottom: 18px;
+}
+
+.bloque-skill-item h3 {
+    font-size: 16px;
+    color: #E2BF7D;
+    margin-bottom: 5px;
+    margin-top: 0;
+}
+
+.bloque-skill-item p {
+    font-size: 14px;
+    line-height: 1.4;
+    color: #FFFFFF;
+}
+
+.detalle-skill {
+    font-size: 13px;
+    opacity: 0.85;
+    margin-top: 3px;
+}
+
+/* Adaptabilidad a dispositivos móviles (1 columna en pantallas pequeñas) */
+@media (max-width: 768px) {
+    .contenedor-columnas-skills {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .navegacion {
+        gap: 8px;
+    }
+
+    .btn-pestana {
+        padding: 8px 14px;
+        font-size: 13px;
+    }
+}
