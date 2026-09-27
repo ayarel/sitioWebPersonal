@@ -18,41 +18,43 @@ body {
 
 /* Header superior fijo */
 .header-principal {
-    background-color: #2D0000;
+    background-color: #1F0505;
     width: 100%;
-    height: 90px;
+    min-height: 90px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    padding: 10px 30px;
 }
 
 h1 {
-    color: #EEEAD7;
-    font-size: 26px;
+    color: #FFFFFF;
+    font-size: 24px;
     font-family: 'Franklin Gothic Medium', sans-serif;
-    position: absolute;
-    left: 40px;
     margin: 0;
 }
 
 /* Menú de navegación */
 .navegacion {
     display: flex;
-    gap: 15px;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .btn-pestana {
     background-color: #8C2D2D;
-    color: #EEEAD7;
+    color: #FFFFFF;
     text-decoration: none;
-    padding: 10px 24px;
+    padding: 8px 18px;
     border-radius: 8px;
     font-weight: bold;
+    font-size: 14px;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
@@ -63,15 +65,14 @@ h1 {
 
 /* Redes Sociales en Esquina Superior Derecha */
 .redes-header {
-    position: absolute;
-    right: 40px;
     display: flex;
-    gap: 15px;
+    gap: 12px;
+    align-items: center;
 }
 
 .redes-header img {
-    width: 28px;
-    height: 28px;
+    width: 26px;
+    height: 26px;
     transition: transform 0.2s ease;
 }
 
@@ -81,12 +82,12 @@ h1 {
 
 /* Contenedor del Contenido Principal */
 .contenido-principal {
-    margin-top: 120px;
-    padding: 20px;
+    margin-top: 130px;
+    padding: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 50px;
+    gap: 35px;
 }
 
 .seccion-contenedor {
@@ -100,7 +101,7 @@ h1 {
 .tarjeta-presentacion {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 25px;
     width: 100%;
     justify-content: center;
     flex-wrap: wrap;
@@ -108,8 +109,8 @@ h1 {
 
 /* Marco circular de la foto de perfil */
 .marco-circular {
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     overflow: hidden;
     border: 4px solid #8C2D2D;
@@ -126,9 +127,9 @@ h1 {
 
 /* Tarjeta Semitransparente con Efecto Cristal */
 .tarjeta-semitransparente {
-    background-color: rgba(0, 0, 0, 0.55);
+    background-color: rgba(0, 0, 0, 0.65);
     border-radius: 16px;
-    padding: 35px;
+    padding: 25px;
     border: 1px solid rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
@@ -143,23 +144,24 @@ h1 {
 
 /* Estilos de Textos e Información */
 .tarjeta-semitransparente h2 {
-    font-size: 24px;
-    margin-bottom: 15px;
+    font-size: 22px;
+    margin-bottom: 12px;
     border-bottom: 2px solid #8C2D2D;
-    padding-bottom: 8px;
-    color: #EEEAD7;
+    padding-bottom: 6px;
+    color: #FFFFFF;
 }
 
 .tarjeta-semitransparente h3 {
-    font-size: 18px;
-    margin-top: 15px;
-    margin-bottom: 8px;
+    font-size: 17px;
+    margin-top: 12px;
+    margin-bottom: 6px;
     color: #E2BF7D;
 }
 
 .descripcion-personal {
-    line-height: 1.6;
-    margin-bottom: 20px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    font-size: 15px;
 }
 
 .datos-personales p, 
@@ -167,21 +169,23 @@ h1 {
 .datos-contacto p {
     margin-bottom: 8px;
     line-height: 1.4;
+    font-size: 14px;
+    word-break: break-word; /* Evita que correos o direcciones largas se salgan del marco */
 }
 
 .bloque-academico {
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
 
 /* Reproductor de Música de Ambiente */
 .musica-ambiente {
-    margin-top: 20px;
-    padding-top: 15px;
+    margin-top: 18px;
+    padding-top: 12px;
     border-top: 1px dashed rgba(255, 255, 255, 0.2);
 }
 
 .musica-ambiente p {
-    font-size: 14px;
+    font-size: 13px;
     color: #E2BF7D;
     margin-bottom: 6px;
 }
@@ -189,15 +193,9 @@ h1 {
 .musica-ambiente audio {
     width: 100%;
     height: 38px;
-    margin-top: 6px;
+    margin-top: 4px;
     border-radius: 20px;
     outline: none;
-    opacity: 0.85;
-    transition: opacity 0.3s ease;
-}
-
-.musica-ambiente audio:hover {
-    opacity: 1;
 }
 
 .credito-audio {
@@ -212,18 +210,18 @@ h1 {
 .contenedor-columnas-skills {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 30px;
+    gap: 25px;
     margin-top: 15px;
 }
 
 .bloque-skill-item {
-    margin-bottom: 18px;
+    margin-bottom: 15px;
 }
 
 .bloque-skill-item h3 {
-    font-size: 16px;
+    font-size: 15px;
     color: #E2BF7D;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
     margin-top: 0;
 }
 
@@ -234,24 +232,60 @@ h1 {
 }
 
 .detalle-skill {
-    font-size: 13px;
+    font-size: 12px;
     opacity: 0.85;
     margin-top: 3px;
 }
 
-/* Adaptabilidad a dispositivos móviles (1 columna en pantallas pequeñas) */
+/* ==========================================
+   ADAPTABILIDAD PARA CELULARES (RESPONSIVO)
+   ========================================== */
 @media (max-width: 768px) {
-    .contenedor-columnas-skills {
-        grid-template-columns: 1fr;
-        gap: 15px;
+    .header-principal {
+        flex-direction: column;
+        height: auto;
+        padding: 12px 10px;
+        gap: 10px;
+    }
+
+    h1 {
+        font-size: 20px;
+        position: static;
+        text-align: center;
     }
 
     .navegacion {
-        gap: 8px;
+        gap: 6px;
+        width: 100%;
+        justify-content: center;
     }
 
     .btn-pestana {
-        padding: 8px 14px;
-        font-size: 13px;
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    .redes-header {
+        position: static;
+        margin-top: 2px;
+    }
+
+    .contenido-principal {
+        margin-top: 175px; /* Compensa la altura del header en celular */
+        padding: 10px;
+    }
+
+    .tarjeta-semitransparente {
+        padding: 20px 15px;
+    }
+
+    .contenedor-columnas-skills {
+        grid-template-columns: 1fr; /* Pasa de 2 columnas a 1 sola columna en celular */
+        gap: 10px;
+    }
+
+    .marco-circular {
+        width: 140px;
+        height: 140px;
     }
 }
