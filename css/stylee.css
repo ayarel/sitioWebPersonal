@@ -1,4 +1,4 @@
-/* Reset general de márgenes y caja */
+/* Reset general */
 * {
     margin: 0;
     padding: 0;
@@ -16,34 +16,37 @@ body {
     color: #FFFFFF;
 }
 
-/* Header superior fijo */
+/* Header superior fijo y responsivo */
 .header-principal {
     background-color: #1F0505;
     width: 100%;
-    min-height: 90px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    padding: 10px 30px;
+    padding: 12px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
 }
 
 h1 {
     color: #FFFFFF;
-    font-size: 24px;
+    font-size: 20px;
     font-family: 'Franklin Gothic Medium', sans-serif;
     margin: 0;
+    white-space: nowrap;
 }
 
 /* Menú de navegación */
 .navegacion {
     display: flex;
-    gap: 12px;
+    gap: 8px;
     flex-wrap: wrap;
+    align-items: center;
     justify-content: center;
 }
 
@@ -51,11 +54,12 @@ h1 {
     background-color: #8C2D2D;
     color: #FFFFFF;
     text-decoration: none;
-    padding: 8px 18px;
+    padding: 6px 12px;
     border-radius: 8px;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 13px;
     transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
 }
 
 .btn-pestana:hover {
@@ -63,16 +67,16 @@ h1 {
     transform: translateY(-2px);
 }
 
-/* Redes Sociales en Esquina Superior Derecha */
+/* Redes Sociales */
 .redes-header {
     display: flex;
-    gap: 12px;
+    gap: 10px;
     align-items: center;
 }
 
 .redes-header img {
-    width: 26px;
-    height: 26px;
+    width: 24px;
+    height: 24px;
     transition: transform 0.2s ease;
 }
 
@@ -82,12 +86,12 @@ h1 {
 
 /* Contenedor del Contenido Principal */
 .contenido-principal {
-    margin-top: 130px;
+    margin-top: 140px;
     padding: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 35px;
+    gap: 30px;
 }
 
 .seccion-contenedor {
@@ -97,7 +101,7 @@ h1 {
     justify-content: center;
 }
 
-/* Presentación con Foto y Tarjeta al lado */
+/* Presentación con Foto y Tarjeta */
 .tarjeta-presentacion {
     display: flex;
     align-items: center;
@@ -107,7 +111,7 @@ h1 {
     flex-wrap: wrap;
 }
 
-/* Marco circular de la foto de perfil */
+/* Marco circular de la foto */
 .marco-circular {
     width: 180px;
     height: 180px;
@@ -125,7 +129,7 @@ h1 {
     object-position: center;
 }
 
-/* Tarjeta Semitransparente con Efecto Cristal */
+/* Tarjeta Semitransparente */
 .tarjeta-semitransparente {
     background-color: rgba(0, 0, 0, 0.65);
     border-radius: 16px;
@@ -142,7 +146,6 @@ h1 {
     max-width: 900px;
 }
 
-/* Estilos de Textos e Información */
 .tarjeta-semitransparente h2 {
     font-size: 22px;
     margin-bottom: 12px;
@@ -170,14 +173,14 @@ h1 {
     margin-bottom: 8px;
     line-height: 1.4;
     font-size: 14px;
-    word-break: break-word; /* Evita que correos o direcciones largas se salgan del marco */
+    word-break: break-word;
 }
 
 .bloque-academico {
     margin-bottom: 18px;
 }
 
-/* Reproductor de Música de Ambiente */
+/* Reproductor de Música */
 .musica-ambiente {
     margin-top: 18px;
     padding-top: 12px;
@@ -206,7 +209,7 @@ h1 {
     color: #E2BF7D;
 }
 
-/* ESTILOS PARA SKILLS (2 COLUMNAS CON GRID) */
+/* SKILLS (GRID 2 COLUMNAS) */
 .contenedor-columnas-skills {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -238,49 +241,45 @@ h1 {
 }
 
 /* ==========================================
-   ADAPTABILIDAD PARA CELULARES (RESPONSIVO)
+   REGLAS EXCLUSIVAS PARA PANTALLAS MÓVILES
    ========================================== */
 @media (max-width: 768px) {
     .header-principal {
-        flex-direction: column;
-        height: auto;
-        padding: 12px 10px;
-        gap: 10px;
+        justify-content: center;
+        text-align: center;
+        padding: 10px;
     }
 
     h1 {
-        font-size: 20px;
-        position: static;
+        width: 100%;
         text-align: center;
+        font-size: 18px;
     }
 
     .navegacion {
-        gap: 6px;
         width: 100%;
         justify-content: center;
+        gap: 6px;
     }
 
     .btn-pestana {
-        padding: 6px 12px;
+        padding: 5px 10px;
         font-size: 12px;
     }
 
     .redes-header {
-        position: static;
+        justify-content: center;
+        width: 100%;
         margin-top: 2px;
     }
 
     .contenido-principal {
-        margin-top: 175px; /* Compensa la altura del header en celular */
+        margin-top: 170px; /* Evita que el menú extendido tape la foto */
         padding: 10px;
     }
 
-    .tarjeta-semitransparente {
-        padding: 20px 15px;
-    }
-
     .contenedor-columnas-skills {
-        grid-template-columns: 1fr; /* Pasa de 2 columnas a 1 sola columna en celular */
+        grid-template-columns: 1fr; /* Una sola columna en celulares */
         gap: 10px;
     }
 
